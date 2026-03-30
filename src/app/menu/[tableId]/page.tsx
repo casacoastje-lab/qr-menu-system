@@ -3,15 +3,20 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import CustomerMenuClient from "./CustomerMenuClient";
 
+export const dynamic = 'force-dynamic';
+
 export default async function MenuPage({
   params,
 }: {
   params: { tableId: string };
 }) {
   const cookieStore = cookies();
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    supabaseUrl,
+    supabaseKey,
     {
       cookies: {
         get(name: string) {
