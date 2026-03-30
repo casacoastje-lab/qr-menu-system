@@ -20,7 +20,7 @@ export default async function MenuPage({
     {
       cookies: {
         get(name: string) {
-           return cookieStore.get(name)?.value;
+          return cookieStore.get(name)?.value;
         },
       },
     }
@@ -71,11 +71,11 @@ export default async function MenuPage({
   }
 
   return (
-    <CustomerMenuClient 
-       table={tableData as any} 
-       restaurant={tableData.restaurants as any} 
-       session={sessionData} 
-       menuItems={menuItems || []} 
+    <CustomerMenuClient
+      table={tableData as any}
+      restaurant={tableData.restaurants as any}
+      session={sessionData}
+      menuItems={menuItems || []}
     />
   );
 }

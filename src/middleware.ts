@@ -60,7 +60,7 @@ export async function middleware(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
 
   const isDashboardRoute = request.nextUrl.pathname.startsWith('/dashboard')
-  
+
   if (isDashboardRoute && !user) {
     const url = request.nextUrl.clone()
     url.pathname = '/auth'
@@ -69,9 +69,9 @@ export async function middleware(request: NextRequest) {
 
   // If user is logged in and trying to access /auth, redirect to dashboard
   if (request.nextUrl.pathname === '/auth' && user) {
-     const url = request.nextUrl.clone()
-     url.pathname = '/dashboard'
-     return NextResponse.redirect(url)
+    const url = request.nextUrl.clone()
+    url.pathname = '/dashboard'
+    return NextResponse.redirect(url)
   }
 
   return response
