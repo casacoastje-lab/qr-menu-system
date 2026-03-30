@@ -122,9 +122,10 @@ export default async function DashboardOverviewPage() {
           <div className="space-y-4">
              {(!pendingRequests || pendingRequests.length === 0) ? (
                 <div className="text-sm text-outline px-2 p-4 bg-surface-container-low rounded-xl border border-dashed border-outline-variant/40">No pending requests</div>
-             ) : pendingRequests.map((req, i) => {
+             ) : (pendingRequests as any[]).map((req, i) => {
                 // Ensure typescript doesn't fail if tables is an array or object from Postgrest
-                const tNum = req.tables ? (Array.isArray(req.tables) ? req.tables[0]?.table_number : req.tables.table_number) : '?';
+                const tables = req.tables;
+                const tNum = tables ? (Array.isArray(tables) ? tables[0]?.table_number : (tables as any).table_number) : '?';
                 return (
                 <div key={i} className="bg-white/80 backdrop-blur-xl rounded-2xl p-5 border-l-4 border-tertiary shadow-sm flex items-start gap-4">
                   <div className="flex-1">
@@ -144,8 +145,9 @@ export default async function DashboardOverviewPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              {(!todayOrders || todayOrders.length === 0) ? (
                  <div className="text-sm text-outline px-2 p-4 bg-surface-container-low rounded-xl border border-dashed border-outline-variant/40">No orders today yet.</div>
-             ) : todayOrders.map((order) => {
-                const tNum = order.tables ? (Array.isArray(order.tables) ? order.tables[0]?.table_number : order.tables.table_number) : '?';
+             ) : (todayOrders as any[]).map((order) => {
+                const tables = order.tables;
+                const tNum = tables ? (Array.isArray(tables) ? tables[0]?.table_number : (tables as any).table_number) : '?';
                 return (
                 <div key={order.id} className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 flex flex-col justify-between min-h-[140px]">
                   <div className="flex justify-between items-start mb-4">
