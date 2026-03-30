@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VIP Loyalty Login | RESTAURANT_NAME</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f8f9fb",
+              "secondary-container": "#b1c2ff",
+              "primary-container": "#1a56db",
+              "surface": "#f8f9fb",
+              "surface-container-highest": "#e1e2e4",
+              "inverse-on-surface": "#f0f1f3",
+              "on-primary-container": "#d4dcff",
+              "error-container": "#ffdad6",
+              "on-surface": "#191c1e",
+              "on-error": "#ffffff",
+              "background": "#f8f9fb",
+              "secondary-fixed": "#dbe1ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#334479",
+              "primary-fixed": "#dbe1ff",
+              "surface-dim": "#d9dadc",
+              "surface-container-low": "#f3f4f6",
+              "on-surface-variant": "#434654",
+              "on-tertiary-container": "#ffd4c5",
+              "surface-container-high": "#e7e8ea",
+              "primary-fixed-dim": "#b5c4ff",
+              "on-tertiary-fixed": "#380d00",
+              "tertiary": "#852b00",
+              "on-secondary": "#ffffff",
+              "secondary": "#4b5c92",
+              "on-tertiary-fixed-variant": "#802a00",
+              "tertiary-fixed": "#ffdbcf",
+              "outline-variant": "#c3c5d7",
+              "outline": "#737686",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-secondary-container": "#3d4e84",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2e3132",
+              "surface-tint": "#1353d8",
+              "surface-variant": "#e1e2e4",
+              "primary": "#003fb1",
+              "tertiary-container": "#ad3b00",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#00174d",
+              "secondary-fixed-dim": "#b5c4ff",
+              "on-secondary-fixed": "#01174b",
+              "surface-container": "#edeef0",
+              "on-background": "#191c1e",
+              "inverse-primary": "#b5c4ff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#003dab",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-shadow-subtle {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Auth suppression rule: Navigation components (BottomNavBar/SideNav) are hidden for transactional/login screens -->
+<main class="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+<!-- Subtle Restaurant Themed Background Element -->
+<div class="absolute inset-0 z-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
+<span class="material-symbols-outlined text-[40rem]" data-icon="restaurant">restaurant</span>
+</div>
+<!-- Top Branding Section -->
+<header class="z-10 text-center mb-12">
+<div class="mb-4 inline-flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-sm ring-1 ring-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<h1 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface mb-2">RESTAURANT_NAME</h1>
+<p class="font-label text-sm uppercase tracking-widest text-secondary font-medium">VIP Loyalty Lounge</p>
+</header>
+<!-- Login Container -->
+<section class="z-10 w-full max-w-md">
+<div class="glass-card rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,30,0.06)] border border-white/50">
+<div class="mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-1">Welcome back</h2>
+<p class="text-on-surface-variant text-sm">Enter your details to access your exclusive rewards.</p>
+</div>
+<form class="space-y-6">
+<!-- Phone Number Input -->
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1" for="phone">Phone Number</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary transition-colors duration-200" data-icon="smartphone">smartphone</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border-0 ring-1 ring-outline-variant/20 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-white transition-all duration-200 outline-none" id="phone" name="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="font-label text-xs font-bold uppercase tracking-wider text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-medium text-primary hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline group-focus-within:text-primary transition-colors duration-200" data-icon="lock">lock</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-low border-0 ring-1 ring-outline-variant/20 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary focus:bg-white transition-all duration-200 outline-none" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full py-4 bg-primary text-on-primary font-headline font-bold rounded-lg shadow-lg shadow-primary/20 hover:bg-primary-container active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2" type="submit">
+<span>Sign In to VIP</span>
+<span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Join VIP Link -->
+<div class="mt-8 pt-6 border-t border-outline-variant/20 text-center">
+<p class="text-on-surface-variant text-sm">
+                        New to the inner circle? 
+                        <a class="text-primary font-bold hover:underline ml-1" href="#">Join VIP</a>
+</p>
+</div>
+</div>
+</section>
+<!-- Footer / Editorial Accents -->
+<footer class="z-10 mt-12 flex flex-col items-center gap-4">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center">
+<span class="font-headline text-2xl font-bold text-primary">1.2k+</span>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant">Active Members</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline text-2xl font-bold text-primary">15%</span>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant">Average Savings</span>
+</div>
+</div>
+<p class="text-[10px] text-outline uppercase tracking-widest mt-4">Secure biometric-ready access</p>
+</footer>
+<!-- Decorative Image/Texture -->
+<div class="absolute bottom-0 right-0 w-64 h-64 -mb-20 -mr-20 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute top-0 left-0 w-64 h-64 -mt-20 -ml-20 bg-tertiary/5 rounded-full blur-3xl"></div>
+</main>
+<!-- Background Ambience Image (Contextual) -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-40">
+<img alt="Restaurant Ambience" class="w-full h-full object-cover scale-110 blur-sm" data-alt="blurred interior of a luxury modern restaurant with soft ambient lighting and golden accents on tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJYyw5qV2TIG68exuyQDn3lRhkoLUhY8MfsL_VfL56S-3qEFR4FgHFe8iZfFSdgGwctZbHVyOLmkQNTlrLgJTGN7l2m5bD-2uyOwB6qQ3JqvBnsi7_MZNYIy0JHY0PYygP7XnLxlCAJCBFfu3J9rE7OaXhN1CzyozUw-B39DXBuDM_B-kzRuDQOIfgRjJSRpJa9a6Sn-VBO7wz8AnCLsi7_DYbHmlkx4-wqucY4ux2UvlAHQ5zi554t3uSA1HTDqdsoxccYGS03zuf"/>
+<div class="absolute inset-0 bg-white/90"></div>
+</div>
+</body></html>

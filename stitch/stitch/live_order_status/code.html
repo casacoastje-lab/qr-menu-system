@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Status | RESTAURANT_NAME</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f8f9fb",
+                        "secondary-container": "#b1c2ff",
+                        "primary-container": "#1a56db",
+                        "surface": "#f8f9fb",
+                        "surface-container-highest": "#e1e2e4",
+                        "inverse-on-surface": "#f0f1f3",
+                        "on-primary-container": "#d4dcff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9fb",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#334479",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-dim": "#d9dadc",
+                        "surface-container-low": "#f3f4f6",
+                        "on-surface-variant": "#434654",
+                        "on-tertiary-container": "#ffd4c5",
+                        "surface-container-high": "#e7e8ea",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "tertiary": "#852b00",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#4b5c92",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "tertiary-fixed": "#ffdbcf",
+                        "outline-variant": "#c3c5d7",
+                        "outline": "#737686",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "on-secondary-container": "#3d4e84",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#1353d8",
+                        "surface-variant": "#e1e2e4",
+                        "primary": "#003fb1",
+                        "tertiary-container": "#ad3b00",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#00174d",
+                        "secondary-fixed-dim": "#b5c4ff",
+                        "on-secondary-fixed": "#01174b",
+                        "surface-container": "#edeef0",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#b5c4ff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#003dab",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 h-16">
+<button class="text-blue-700 dark:text-blue-500 active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold text-slate-900 dark:text-slate-50 font-headline tracking-tight">RESTAURANT_NAME</h1>
+<button class="text-blue-700 dark:text-blue-500 active:scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-px w-full"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<!-- Hero Status Card -->
+<section class="mb-12">
+<div class="mb-2">
+<span class="font-label text-label-sm uppercase tracking-wider text-primary font-bold">Order #8824</span>
+</div>
+<h2 class="font-headline text-3xl font-bold mb-6 tracking-tight">Preparing your meal</h2>
+<div class="relative p-8 rounded-3xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(25,28,30,0.06)] overflow-hidden">
+<!-- Status Background Texture -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<!-- Vertical Stepper -->
+<div class="space-y-10">
+<!-- Step 1: Completed -->
+<div class="flex gap-6 items-start">
+<div class="relative flex flex-col items-center">
+<div class="z-20 flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<div class="absolute top-8 w-0.5 h-10 bg-primary"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Order Received</h3>
+<p class="text-sm text-outline">12:45 PM • Kitchen has confirmed</p>
+</div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex gap-6 items-start">
+<div class="relative flex flex-col items-center">
+<div class="z-20 flex items-center justify-center w-8 h-8 rounded-full bg-primary-container text-primary border-4 border-surface-container-lowest">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="absolute top-8 w-0.5 h-10 bg-surface-container-highest"></div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-primary">Preparing</h3>
+<p class="text-sm text-primary/70">Estimated: 8-12 minutes</p>
+<!-- Progress Bar -->
+<div class="mt-4 w-48 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="flex gap-6 items-start">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-outline">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-outline">Ready to Serve</h3>
+<p class="text-sm text-outline/60">We'll notify you when it's ready</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Summary Section -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-headline text-xl font-bold">Order Summary</h3>
+<span class="font-label text-xs font-medium text-outline">3 ITEMS</span>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-dim">
+<img alt="Salmon Salad" class="w-full h-full object-cover" data-alt="Close-up of a fresh vibrant salad bowl with grilled salmon, avocado slices, and microgreens on a light stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf2XOGFMkMEK2dqmCmbUpehkQMKOjQV7LLSBl-RYXtj4i6TTJ5Bqqd2U2Lhc07WtQHF_XRF4Ge27QUqV-OhTYGywahqA-Uso8NUO53Oi9aEHub6b4qQbohYGbOkpPPUqDhGTqOfwCdqZtDDeXCPpuUMb_eu36KWV1l7LDDPorsfAYJN28l8Hfbx-fQFt5Xo3UtenWX7d0o1tebc6Fr0BIW3sUH5dh6IoqGhDLoOkSrbuyd5KtU4FmoZrb0LtlO6kbPsooZcfjEhlGx"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Pan-Seared Salmon</p>
+<p class="text-xs text-outline">Extra Lemon • Asparagus</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-primary">$24.00</p>
+<p class="text-xs text-outline">Qty: 1</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-dim">
+<img alt="Artisan Pizza" class="w-full h-full object-cover" data-alt="Authentic Italian pizza margherita with fresh basil leaves and melted mozzarella on a dark rustic wooden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxij1gJAtCJ0m6O6a_g9_dGR9FdeTi0e8BOVTlV3rAupLulYaoKzgT6S3iIbn114P1sa-ymuyTxg6aL6Kw7khvst9xIj9cKN-zDrMcdOVSsWUKuJKI6WReyAdzS-X02h98XHgTJ1sSoOjwDKho5RfXwI9eU_BgU2g8-DidqgwqE5gXAut0VHnyRSGQvqpQFbrLyP9Y4c2UeEnrgsF7_GwKC3_gdjA0KGe49JmGuZLkU1fShWHKGv0OEvJIEbgJkOQmR4CwH9QPCvh6"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Truffle Margherita</p>
+<p class="text-xs text-outline">Standard Size</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-primary">$18.50</p>
+<p class="text-xs text-outline">Qty: 1</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl overflow-hidden bg-surface-dim">
+<img alt="Drink" class="w-full h-full object-cover" data-alt="Elegant crystal glass of sparkling mineral water with a fresh lemon wedge and bubbles in a minimalist bright setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHsvtBbf-qsjVKPykmQqF-lZeDhX3jFOA47vhFa7mleAkx5pyyoAj3aj11sgVofyl6fmUVrLcB89gcv5zWcTBNsnv9MmKtzm2i-_wnhCG_jftTV92QNOlokbL4R5GxyHdZvwhZZ-LzVrnU6MjqNLTYjb5dimqEdmK07em6qQ2NxtqMm1aC3tRVTQszwyzsm39Hq-FuNG76p0MtqKELoG7D70WG5JVEa9MDX8GnN2kfu53NZFUJTDqU2WMmF3kk9kKgH5N-9ZfhPR22"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">San Pellegrino</p>
+<p class="text-xs text-outline">Large • With Lime</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-bold text-primary">$6.50</p>
+<p class="text-xs text-outline">Qty: 1</p>
+</div>
+</div>
+</div>
+<!-- Total Recess -->
+<div class="mt-8 p-6 rounded-3xl bg-surface-container-highest border border-outline-variant/20">
+<div class="flex justify-between items-center mb-2">
+<span class="text-outline">Subtotal</span>
+<span class="font-medium">$49.00</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-outline">Tax &amp; Fees</span>
+<span class="font-medium">$4.12</span>
+</div>
+<div class="h-px bg-outline-variant/30 mb-4"></div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-lg">Total</span>
+<span class="font-headline font-extrabold text-2xl text-primary">$53.12</span>
+</div>
+</div>
+</section>
+<!-- Call Waiter Assistant -->
+<div class="mt-4 flex flex-col items-center gap-4 p-6 rounded-3xl bg-secondary-fixed/30 border border-secondary-container/20">
+<span class="material-symbols-outlined text-secondary scale-125">support_agent</span>
+<div class="text-center">
+<p class="font-headline font-bold text-on-secondary-fixed">Need assistance?</p>
+<p class="text-sm text-on-secondary-fixed-variant">Our staff is ready to help you with your order.</p>
+</div>
+<button class="w-full py-4 px-6 bg-primary text-on-primary font-headline font-bold rounded-2xl shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined text-xl">notifications_active</span>
+                Call Waiter
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-950 rounded-t-2xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 transition-transform active:scale-105" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label text-[11px] font-medium uppercase tracking-wider mt-1">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 transition-transform active:scale-105" href="#">
+<span class="material-symbols-outlined">stars</span>
+<span class="font-label text-[11px] font-medium uppercase tracking-wider mt-1">Loyalty</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-xl px-3 py-1.5 transition-transform active:scale-105" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-label text-[11px] font-medium uppercase tracking-wider mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 transition-transform active:scale-105" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-label text-[11px] font-medium uppercase tracking-wider mt-1">Cart</span>
+</a>
+</nav>
+</body></html>

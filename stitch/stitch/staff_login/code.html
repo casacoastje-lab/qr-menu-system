@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Staff Login | The Digital Maître D’</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-tertiary-fixed-variant": "#802a00",
+                        "on-primary-fixed": "#00174d",
+                        "tertiary": "#852b00",
+                        "tertiary-container": "#ad3b00",
+                        "secondary": "#4b5c92",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#434654",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d9dadc",
+                        "primary-fixed": "#dbe1ff",
+                        "outline": "#737686",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-secondary-fixed-variant": "#334479",
+                        "inverse-on-surface": "#f0f1f3",
+                        "surface-container-low": "#f3f4f6",
+                        "surface-container": "#edeef0",
+                        "inverse-primary": "#b5c4ff",
+                        "surface-variant": "#e1e2e4",
+                        "surface-bright": "#f8f9fb",
+                        "outline-variant": "#c3c5d7",
+                        "surface-container-highest": "#e1e2e4",
+                        "on-primary-fixed-variant": "#003dab",
+                        "on-tertiary-container": "#ffd4c5",
+                        "inverse-surface": "#2e3132",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b5c4ff",
+                        "on-secondary-container": "#3d4e84",
+                        "secondary-container": "#b1c2ff",
+                        "primary-container": "#1a56db",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e7e8ea",
+                        "background": "#f8f9fb",
+                        "on-primary-container": "#d4dcff",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-surface": "#191c1e",
+                        "surface-tint": "#1353d8",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#01174b",
+                        "primary": "#003fb1",
+                        "surface": "#f8f9fb",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb59a",
+                        "on-error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.375rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Background Decoration (Architectural Philosophy) -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] left-[-5%] w-[40%] h-[60%] rounded-full bg-primary-fixed/30 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[60%] rounded-full bg-secondary-container/20 blur-[120px]"></div>
+</div>
+<main class="relative z-10 w-full max-w-md px-6">
+<!-- Logo & Branding Section -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary-container mb-6 shadow-xl shadow-primary/10">
+<span class="material-symbols-outlined text-on-primary text-3xl" data-icon="restaurant_menu">restaurant_menu</span>
+</div>
+<h1 class="font-headline text-3xl font-extrabold tracking-tight text-on-background">Sign In to Dashboard</h1>
+<p class="text-on-surface-variant font-body mt-2 text-sm">Welcome back to The Digital Maître D’</p>
+</div>
+<!-- Login Card -->
+<div class="glass-card rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,30,0.06)] border border-surface-container-highest/20">
+<form action="#" class="space-y-6" method="POST">
+<!-- Error State Example (Hidden by default, shown here as a visual sample) -->
+<div class="bg-error-container/30 border-l-4 border-error p-4 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-lg" data-icon="error">error</span>
+<p class="text-on-error-container text-xs font-medium">Invalid email or password. Please try again.</p>
+</div>
+<!-- Input Groups -->
+<div class="space-y-4">
+<div class="space-y-1.5">
+<label class="block font-label text-[11px] uppercase tracking-widest text-on-surface-variant font-semibold px-1" for="email">Email Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg transition-colors group-focus-within:text-primary" data-icon="mail">mail</span>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/50 transition-all font-body text-sm" id="email" name="email" placeholder="chef@restaurant.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center px-1">
+<label class="block font-label text-[11px] uppercase tracking-widest text-on-surface-variant font-semibold" for="password">Password</label>
+<a class="text-[11px] font-semibold text-primary-container hover:underline tracking-tight" href="#">Forgot Password?</a>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg transition-colors group-focus-within:text-primary" data-icon="lock">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline/50 transition-all font-body text-sm" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Login Action -->
+<div class="pt-2">
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-headline font-bold py-4 rounded-lg shadow-lg shadow-primary-container/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+<span>Login</span>
+<span class="material-symbols-outlined text-lg" data-icon="login">login</span>
+</button>
+</div>
+</form>
+<div class="mt-8 pt-6 border-t border-surface-container-highest/50">
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant font-label tracking-tight">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span>Secure SSL Encryption</span>
+</div>
+<span class="opacity-50">v2.4.0</span>
+</div>
+</div>
+</div>
+<!-- Support Link -->
+<p class="text-center mt-8 text-on-surface-variant font-body text-xs">
+            Need help accessing your terminal? <a class="text-primary font-semibold hover:underline" href="#">Contact Support</a>
+</p>
+</main>
+<!-- Footer Identity -->
+<footer class="absolute bottom-8 w-full text-center z-10">
+<div class="flex items-center justify-center gap-2 opacity-60 grayscale hover:grayscale-0 transition-all cursor-default">
+<span class="font-headline font-black text-xs tracking-tighter text-on-background">Maitre D' SaaS</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-body text-[10px] uppercase tracking-widest font-bold">Premium Management</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,26 @@
+# QR Menu System - PRD
+
+## Tech Stack
+- Frontend/Backend: Next.js 14 (App Router)
+- Database/Auth/Realtime: Supabase
+- Styling: Tailwind CSS + shadcn/ui
+- AI: Google Gemini API
+- QR: qrcode.react
+
+## Database Schema
+1. `restaurants`: id, name, logo_url, address, owner_id, created_at
+2. `tables`: id, restaurant_id, table_number, qr_code_url, status (empty, occupied, ordering)
+3. `table_sessions`: id, table_id, opened_by, opened_at, closed_at, expires_at, status (active, closed, expired)
+4. `menu_items`: id, restaurant_id, category, name, description, price, image_url, tags, daily_limit, is_available
+5. `orders`: id, table_id, session_id, restaurant_id, status (received, preparing, ready, delivered), total_price, notes, created_at
+6. `order_items`: id, order_id, menu_item_id, quantity, item_notes, unit_price
+7. `loyalty_accounts`: id, phone_number, total_points, created_at, last_visit
+
+## Core Flows
+- **Staff:** Login -> Manage Tables (Open/Close Sessions) -> Manage Menu (AI Description/Tags) -> View Live Orders (Real-time updates) -> Analytics.
+- **Customer:** Scan QR -> Session Validation -> View Menu (Filters, Cart) -> Place Order -> Track Status.
+
+## Design
+- Primary Color: #1A56DB (Blue)
+- Clean, modern SaaS aesthetic using shadcn/ui.
+- Mobile-first for the customer menu.

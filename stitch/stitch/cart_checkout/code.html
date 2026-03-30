@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review Order | Digital Maître D’</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#f8f9fb",
+              "secondary-container": "#b1c2ff",
+              "primary-container": "#1a56db",
+              "surface": "#f8f9fb",
+              "surface-container-highest": "#e1e2e4",
+              "inverse-on-surface": "#f0f1f3",
+              "on-primary-container": "#d4dcff",
+              "error-container": "#ffdad6",
+              "on-surface": "#191c1e",
+              "on-error": "#ffffff",
+              "background": "#f8f9fb",
+              "secondary-fixed": "#dbe1ff",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#334479",
+              "primary-fixed": "#dbe1ff",
+              "surface-dim": "#d9dadc",
+              "surface-container-low": "#f3f4f6",
+              "on-surface-variant": "#434654",
+              "on-tertiary-container": "#ffd4c5",
+              "surface-container-high": "#e7e8ea",
+              "primary-fixed-dim": "#b5c4ff",
+              "on-tertiary-fixed": "#380d00",
+              "tertiary": "#852b00",
+              "on-secondary": "#ffffff",
+              "secondary": "#4b5c92",
+              "on-tertiary-fixed-variant": "#802a00",
+              "tertiary-fixed": "#ffdbcf",
+              "outline-variant": "#c3c5d7",
+              "outline": "#737686",
+              "tertiary-fixed-dim": "#ffb59a",
+              "on-secondary-container": "#3d4e84",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2e3132",
+              "surface-tint": "#1353d8",
+              "surface-variant": "#e1e2e4",
+              "primary": "#003fb1",
+              "tertiary-container": "#ad3b00",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#00174d",
+              "secondary-fixed-dim": "#b5c4ff",
+              "on-secondary-fixed": "#01174b",
+              "surface-container": "#edeef0",
+              "on-background": "#191c1e",
+              "inverse-primary": "#b5c4ff",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#003dab",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.375rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell (Suppressed Nav links for checkout focus) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-50 active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-slate-900 font-headline tracking-tight uppercase">RESTAURANT_NAME</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-medium uppercase tracking-wider text-outline">Table 12</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10">
+<p class="font-label text-xs font-medium uppercase tracking-[0.15em] text-tertiary mb-2">Review Your Selection</p>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Your Cart</h2>
+</div>
+<!-- Cart Items List (Asymmetric Editorial Style) -->
+<div class="space-y-6 mb-12">
+<!-- Item 1 -->
+<div class="group relative flex gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/10">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a vibrant healthy Buddha bowl with quinoa, avocado, and fresh greens on a ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFOs4TXMKsRwqEddvkm3jX4nyrmRI2fKKc6Sshv2mQWTp6xg4EhtUwgfQGJS9uo4qb3Xm-YmRJL0whdnzYbSsbskp5ZSBoFOq7addaR0Qz0GcN1yVvomZuvV5h-qv4_gqXq2E87V8UitiR4NmfqVPQr6wdQ6OwGj5Ma2z_2uK2f7eJ1fWnta6KsZaYi0TnDsQwf0EnvmqO_qzenMyGGFV9MAjSEtm4FWjYB4et5JN0boVTCQ2pEOnFkD_FigQPr0e4IlN59Db5eXo1"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg font-bold text-on-surface">Artisan Harvest Bowl</h3>
+<span class="font-body font-semibold text-primary">$18.50</span>
+</div>
+<p class="text-on-surface-variant text-sm mt-1 line-clamp-1">Quinoa, roasted roots, tahini dressing.</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/20">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="px-4 font-body font-bold text-sm">01</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-error text-sm font-medium hover:underline opacity-60 hover:opacity-100 transition-opacity">Remove</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative flex gap-4 p-4 rounded-xl transition-all duration-300 hover:bg-surface-container-lowest border border-transparent hover:border-outline-variant/10">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-surface-container-highest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Gourmet wood-fired pizza with fresh buffalo mozzarella, basil leaves, and vibrant tomato sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs1OpAdtMlZRyfriIzM_JXtoMeKVnva_Opw_JPsbMaCmLX1-3DNekTuDukzc5h2f6z-joss3UpnVArpSLinoydX6gdVaj9k-yU4qfg74sP1Q8itPnGpcQUWTrpKaglhvflogfaN7KUojFBdj7AZEcBtGFlpX_mnknjE5k07yHj7UGBrHnFGm9oSwY0wvjEj5x-0FuEHhKkIyArxTa6TzszUnTl9ErjpODyWzuHP7CKbeAQgTCmsJGg-dnUmCdmt13jaOjiWDf9FDBa"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-lg font-bold text-on-surface">Truffle Marguerita</h3>
+<span class="font-body font-semibold text-primary">$24.00</span>
+</div>
+<p class="text-on-surface-variant text-sm mt-1 line-clamp-1">Buffalo mozzarella, fresh basil, truffle oil.</p>
+</div>
+<div class="flex justify-between items-center mt-4">
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/20">
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="px-4 font-body font-bold text-sm">02</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<button class="text-error text-sm font-medium hover:underline opacity-60 hover:opacity-100 transition-opacity">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Special Instructions -->
+<section class="mb-12">
+<label class="block text-sm font-bold text-on-surface mb-3 flex items-center gap-2" for="instructions">
+<span class="material-symbols-outlined text-primary text-lg">edit_note</span>
+                Special Instructions/Notes for the Chef
+            </label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest border-0 rounded-xl p-4 text-sm font-body text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all resize-none shadow-inner" id="instructions" placeholder="E.g. No onions, extra crispy, gluten-free preference..." rows="3"></textarea>
+<div class="absolute bottom-3 right-3 text-[10px] text-outline font-medium uppercase tracking-widest">Optional</div>
+</div>
+</section>
+<!-- Summary Section (Tonal Layering) -->
+<section class="bg-surface-container-low rounded-3xl p-8 space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant font-medium">Subtotal</span>
+<span class="text-on-surface font-semibold">$66.50</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant font-medium">Service Charge (5%)</span>
+<span class="text-on-surface font-semibold">$3.32</span>
+</div>
+<div class="flex justify-between items-center text-sm pb-4 border-b border-outline-variant/20">
+<span class="text-on-surface-variant font-medium">VAT (10%)</span>
+<span class="text-on-surface font-semibold">$6.65</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="font-headline text-xl font-extrabold text-on-surface uppercase tracking-tight">Total Amount</span>
+<div class="text-right">
+<span class="font-headline text-2xl font-extrabold text-primary">$76.47</span>
+<p class="text-[10px] text-outline uppercase font-bold tracking-tighter">Incl. all taxes</p>
+</div>
+</div>
+</section>
+<!-- Upsell Recommendation (Editorial Layout) -->
+<div class="mt-8 flex items-center gap-6 p-4 border border-outline-variant/10 rounded-2xl bg-white shadow-sm">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Professional latte art in a white ceramic cup on a wooden table with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpwfjDqcpHgs1hY085fDdqhmatJGfg57WXS_848PHi0dSdtBsNXyj8op-wzLxl-YzhOTAUpIMPxEoi6CfLmpNaQ4mnJMn1ffu71TBxOuCuAKyxLimyJ-IorshWY_WqUsFisuEjknTdSXNqqZyUAya514fmWj1OieaLdugjl0tqkytcJCF0LN5hb6374rqHMFuHWNUVfy2ECd4UibsVa6NAHI27lCo6nXaV7eLYK7dBjudyjEJaVv6CPVc8kVTfPzmuBWU88K3Yoeh9"/>
+</div>
+<div class="flex-grow">
+<h4 class="text-sm font-bold text-on-surface">Would you like a coffee?</h4>
+<p class="text-xs text-on-surface-variant">Recommended with your selection</p>
+</div>
+<button class="bg-primary/10 text-primary font-bold text-xs py-2 px-4 rounded-full hover:bg-primary hover:text-white transition-all">Add +$4</button>
+</div>
+</main>
+<!-- Bottom Action Bar (Fixed) -->
+<footer class="fixed bottom-0 left-0 w-full glass-card p-6 pb-8 border-t border-outline-variant/10 z-50">
+<div class="max-w-2xl mx-auto">
+<button class="w-full bg-primary text-on-primary h-16 rounded-2xl font-headline font-bold text-lg flex items-center justify-center gap-3 shadow-xl hover:bg-primary-container active:scale-[0.98] transition-all duration-200">
+                PLACE ORDER
+                <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-[10px] text-outline uppercase font-bold tracking-[0.2em] mt-4">By placing order you agree to our terms &amp; conditions</p>
+</div>
+</footer>
+<!-- Suppressed BottomNavBar for Checkout focus as per "Destination Rule" -->
+</body></html>
