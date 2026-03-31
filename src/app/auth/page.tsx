@@ -29,8 +29,10 @@ export default function AuthPage() {
       toast.error("Failed to sign in", { description: error.message });
     } else if (data.session) {
       toast.success("Successfully signed in!");
-      router.push("/dashboard");
+      // Use window.location.href for a hard redirect to ensure cookies are synced for SSR
+      window.location.href = "/dashboard";
     }
+
     
     setLoading(false);
   };
