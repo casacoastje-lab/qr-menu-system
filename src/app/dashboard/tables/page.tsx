@@ -1,5 +1,7 @@
 import TablesClient from "./TablesClient";
 
+export const dynamic = 'force-dynamic';
+
 export default function TablesPage() {
   return (
     <div className="space-y-8">
