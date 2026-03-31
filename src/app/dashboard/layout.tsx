@@ -4,6 +4,8 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import { ReactNode } from "react";
 
+import LogoutButton from "./LogoutButton";
+
 export default async function DashboardLayout({
   children,
 }: {
@@ -80,6 +82,10 @@ export default async function DashboardLayout({
             <span className="material-symbols-outlined" data-icon="settings">settings</span>
             Settings
           </Link>
+          
+          <div className="pt-4 mt-4 border-t border-slate-200/50">
+             <LogoutButton />
+          </div>
         </nav>
         
         <div className="mt-auto p-4 bg-slate-100 dark:bg-slate-900 rounded-2xl flex items-center gap-3">
@@ -92,6 +98,7 @@ export default async function DashboardLayout({
           </div>
         </div>
       </aside>
+
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto relative">
