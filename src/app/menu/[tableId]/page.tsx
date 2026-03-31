@@ -42,13 +42,15 @@ export default async function MenuPage({
     return notFound();
   }
 
-  // 2. Verify Active Session
-  const { data: sessionData } = await supabase
+  // 2. Verify Active Session (Use maybeSingle to prevent crashes if 0 or 2+ results exist)
+  const { data: sessionData, error: sessionError } = await supabase
     .from("table_sessions")
     .select("*")
     .eq("table_id", params.tableId)
     .eq("status", "active")
-    .single();
+    .order('opened_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
 
   // 3. Fetch Menu Items for this restaurant
   const { data: menuItems } = await supabase
@@ -63,12 +65,20 @@ export default async function MenuPage({
       <div className="min-h-screen bg-surface flex flex-col items-center justify-center p-6 text-center">
         <span className="material-symbols-outlined text-6xl text-outline-variant mb-4">lock</span>
         <h1 className="text-2xl font-headline font-bold text-on-surface mb-2">Table is Closed</h1>
-        <p className="text-on-surface-variant max-w-sm">
+        <p className="text-on-surface-variant max-w-sm mb-8">
           There is no active ordering session for this table. Please ask your waiter to open the table session.
         </p>
+        
+        {/* Diagnostic info for user to quickly cross-check with dashboard */}
+        <div className="bg-surface-container-low p-4 rounded-xl border border-outline-variant/20 text-[10px] space-y-1 font-mono text-outline">
+           <p>SYSTEM DIAGNOSTICS</p>
+           <p>TABLE_ID: {params.tableId}</p>
+           <p>CHECK_TIME: {new Date().toLocaleTimeString()}</p>
+        </div>
       </div>
     );
   }
+
 
   return (
     <CustomerMenuClient
